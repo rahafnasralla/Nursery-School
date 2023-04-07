@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './landingpage/style.scss';
+import LandingPage from './landingpage/LandingPage';
+import Navbar from './landingpage/Navbar';
+import Footer from './landingpage/footer';
+import Services from './landingpage/services/Services';
+import ContactUs from './landingpage/ContactUs';
+import Ourteam from './landingpage/ourteam/Ourteam';
+import Job from './landingpage/Job';
+import "bootstrap";
+import "bootstrap/scss/bootstrap.scss";
+import Testimonials from './landingpage/testimonials/Testimonials';
+import Application from './Job/Application';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Navbar/>
+     {/* <Application/> */}
+     <LandingPage/>
+     <Services/>
+     <Ourteam/>
+     <Job/>
+     <Testimonials/>
+     <ContactUs/>
+     <Footer/>
     </div>
   );
 }
