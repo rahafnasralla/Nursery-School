@@ -1,8 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import Wave from 'react-wavify'
 import wave from "../../wave.svg"
-import Fade from 'react-reveal/Fade'
-import Reveal from 'react-reveal/Reveal'
+import Fade from  'react-reveal/Fade'
 import './services.scss'
 import service from './service.js'
 
