@@ -1,5 +1,6 @@
 import { useState, useRef } from "react"
 import emailjs from '@emailjs/browser';
+import './modal.scss'
 
 export default function Contact()  {
     const [name,setName] = useState("")
@@ -34,7 +35,7 @@ export default function Contact()  {
     return (
 
         <div>
-        <div className="container mt-5">
+        <div className=" contact-modal container mt-5">
         <div className="modal" id="myModal">
             <div className="modal-dialog">
                 <div className="modal-content">
