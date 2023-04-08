@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion'
 export default function LandingPage() {
     return(
-        <div className="padding">
+        <div className="">
         <div className="">
           <section>
             <div className="container"> 

@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import NavBar from './Navbar'
 import {useRef,useEffect} from 'react';
 import Contact from './Contact/Contact';
 import { Modal } from 'bootstrap';
-import { GlobalContext } from '../Utils/Context';
+import { GlobalContext } from './Context';
+import Navbar from './landingpage/Navbar'
+import Footer from './landingpage/footer';
 
 
 export default function Layout() {
@@ -26,10 +27,11 @@ export default function Layout() {
 
     return (
             <GlobalContext.Provider value={{showModal}}>
-            <div className="">
+            <div className="App">
                 <Contact/>
-                <NavBar />
-                <Outlet />
+                <Navbar/>
+                <Outlet/>
+                <Footer/>
             </div>
             </GlobalContext.Provider>
     )
