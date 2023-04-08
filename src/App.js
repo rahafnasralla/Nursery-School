@@ -10,6 +10,7 @@ import Job from './landingpage/Job';
 import Testimonials from './landingpage/testimonials/Testimonials';
 import ContactUs from './landingpage/ContactUs';
 import NotFound from './NotFound/NotFound';
+import Application from './Job/Application'
 
 function App() {
 
@@ -25,6 +26,11 @@ function App() {
                   <Testimonials/>
                   <ContactUs/>
             </div>
+      }
+      />
+
+      <Route path={'/application'} element={  
+            <Application/>
       }
       />
     </Route>
