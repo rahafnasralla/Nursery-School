@@ -6,10 +6,7 @@ import { GlobalContext } from './Context';
 import Navbar from './landingpage/Navbar'
 import Footer from './landingpage/footer';
 
-
 export default function Layout() {
-
-
 
     const modal = useRef()
     useEffect(() => {
@@ -19,11 +16,6 @@ export default function Layout() {
     const showModal = () => {
         modal.current.show()
     }
-
-
-
-
-
 
     return (
             <GlobalContext.Provider value={{showModal}}>

@@ -29,7 +29,7 @@ export default function Services() {
         <div className='d-flex services'>
         {service_?.map((item, idx) => {
                     return (
-          <div className='service-1'>
+          <div key={idx} className='service-1'>
           <div className='shapes'>
           <div className="shape-1 right"></div>
           <div className="shape-2 right"></div>

@@ -1,0 +1,75 @@
+.container-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+.xylophone {
+    display: flex;
+    align-items: center;
+}
+.note-button {
+    padding: 10px;
+    height: 250px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    // background-color: green;
+    border-radius:5px ;
+    width: 70px;
+    font-size: 42px;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    &:hover {
+        background-color: #2b6a2b;
+    }
+
+    &:not(last-child) {
+        margin-right: 15px;
+    }
+
+
+
+    &:before, &:after {
+        content: "";
+        background-color: white;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+
+    }
+}
+
+.circle {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.game-buttons {
+    border: none;
+    color: black;
+    background-color: rgb(246, 189, 215);
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    letter-spacing: 2px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.played-notes {
+
+    font-size: 20px;
+    padding: 10px;
+
+}
+

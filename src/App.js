@@ -1,5 +1,5 @@
 import './landingpage/style.scss';
-import { Route, createBrowserRouter, RouterProvider, createRoutesFromElements } from 'react-router-dom'
+import { Route, createBrowserRouter, RouterProvider, createRoutesFromElements, Routes, BrowserRouter } from 'react-router-dom'
 import "bootstrap";
 import "bootstrap/scss/bootstrap.scss";
 import Layout from './Layout'
@@ -11,12 +11,20 @@ import Testimonials from './landingpage/testimonials/Testimonials';
 import ContactUs from './landingpage/ContactUs';
 import NotFound from './NotFound/NotFound';
 import Application from './Job/Application'
+import MemoryGame from './games/MemoryGame';
+import Xylophone from './games/Xylophone';
 
 function App() {
 
-  const router = createBrowserRouter(
-   createRoutesFromElements(
-    <Route element={<Layout/>} errorElement={<NotFound/>}>
+
+
+  
+
+  return(
+    <BrowserRouter>
+          <Routes  errorElement={<NotFound/>}>
+
+<Route element={<Layout/>} errorElement={<NotFound/>}>
       <Route path={'/'} element={  
             <div>
                   <LandingPage/>
@@ -28,18 +36,21 @@ function App() {
             </div>
       }
       />
-
       <Route path={'/application'} element={  
             <Application/>
       }
       />
+
     </Route>
 
-   )
-  )
+    <Route path={'/memorygame'} element={<MemoryGame/>}/>
+    <Route path={'/xylophone'} element={<Xylophone/>}/>
 
-  return(
-    <RouterProvider router={router}/>
+
+    <Route path="*" element={<NotFound/>}></Route>
+
+    </Routes>
+    </BrowserRouter>
   )
 
 }
